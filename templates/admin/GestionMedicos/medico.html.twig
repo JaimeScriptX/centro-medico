@@ -1,0 +1,41 @@
+{% extends 'gestionmedicos.html.twig ' %}
+
+{% block contenido %}
+
+<div class="container">
+<h1>Editar Medico</h1>
+{# form(form)#}
+  
+
+{{ form_start(form) }}
+ 
+
+{{ form_label(form.id) }}
+{{ form_widget(form.id) }} 
+
+
+{{ form_label(form.nombre) }}
+{{ form_widget(form.nombre) }} 
+
+{{ form_label(form.papellido) }}
+{{ form_widget(form.papellido) }} 
+
+{{ form_label(form.sapellido) }}
+{{ form_widget(form.sapellido) }} 
+
+
+<table>
+<tr><td></td><td></td></tr>
+<tr><td>{{ form_label(form.especialidades) }}</td><td></td><td>{{ form_label(form.especialidad) }}</td></tr>
+<tr><td>{{ form_widget(form.especialidades) }}</td><td>{{ form_widget(form.Add)}}</br>{{ form_widget(form.Remove)}}</td><td>{{ form_widget(form.especialidad) }}</td><td> {{ form_widget(form.Search)}}</br>{{ form_widget(form.Buscar)}}</td></tr>
+</table>
+
+
+
+{{ form_end(form )}}
+
+
+<a class="btn btn-secondary" style="margin-top: 10px" href="{{ path( 'listar_medicos')}}">Cancel</a>
+</div>
+
+{% endblock %}

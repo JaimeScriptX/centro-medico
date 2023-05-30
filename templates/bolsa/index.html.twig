@@ -1,0 +1,45 @@
+{% extends 'bolsa.html.twig' %}
+
+{% block body %}
+{{ form_start(form) }}
+<div class="row g-3">
+    <div class="col-12 col-sm-6">
+        {{ form_widget(form.bolsa_puestos) }}
+    </div>
+    <div class="col-12 col-sm-6">
+        {{ form_widget(form.email) }}
+    </div>
+    <div class="col-12 col-sm-6">
+        {{ form_widget(form.nombre) }}
+    </div>
+        <div class="col-12 col-sm-6">
+        {{ form_widget(form.apellidos) }}
+    </div>
+    <div class="col-12 col-sm-6">
+        {{ form_widget(form.dni) }}
+    </div>
+    <div class="col-12 col-sm-6">
+        {{ form_widget(form.direccion) }}
+    </div>
+    <div class="col-12 col-sm-6">
+        {{ form_widget(form.telefono) }}
+    </div>
+        <div class="col-12 col-sm-6">
+        {{ form_widget(form.poblacion) }}
+    </div>
+    <div class="col-12 col-sm-6">
+        {{ form_widget(form.codigo_postal) }}
+    </div>
+        <div class="col-12 col-sm-6">
+        {{ form_widget(form.detalles) }}
+    </div>
+    <div class="col-12">
+     {{ form_widget(form.doc) }}
+    </div>
+    <div class="col-12">
+     {{ form_widget(form.aceptar) }}
+    </div>
+</div>
+{{ form_end(form) }}
+
+{% endblock %}

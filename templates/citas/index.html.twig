@@ -1,0 +1,33 @@
+{% extends 'citas.html.twig' %}
+
+{% block body %}
+{{ form_start(form) }}
+<div class="row g-3">
+    <div class="col-12 col-sm-6">
+        {{ form_widget(form.especialidad) }}
+    </div>
+    <div class="col-12 col-sm-6">
+        {{ form_widget(form.email) }}
+    </div>
+    <div class="col-12 col-sm-6">
+        {{ form_widget(form.nombre) }}
+    </div>
+    <div class="col-12 col-sm-6">
+        {{ form_widget(form.dni) }}
+    </div>
+    <div class="col-12 col-sm-6">
+        {{ form_widget(form.direccion) }}
+    </div>
+    <div class="col-12 col-sm-6">
+        {{ form_widget(form.telefono) }}
+    </div>
+    <div class="col-12">
+     {{ form_widget(form.detalles) }}
+    </div>
+    <div class="col-12">
+     {{ form_widget(form.enviar) }}
+    </div>
+</div>
+{{ form_end(form) }}
+
+{% endblock %}

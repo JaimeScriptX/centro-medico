@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hospital Jose Planes</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid py-2 border-bottom d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-decoration-none text-body pe-3" href=""><i class="bi bi-telephone me-2"></i>+012 345 6789</a>
+                        <span class="text-body">|</span>
+                        <a class="text-decoration-none text-body px-3" href=""><i class="bi bi-envelope me-2"></i>info@example.com</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-body ps-2" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+{{ render(controller(  'App\\Controller\\MenuController:menu')) }}
+    <!-- Navbar End -->
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-7 text-center text-lg-start">
+                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="border-color: rgba(256, 256, 256, .3) !important;">Bienvenido al hospital Jose Planes{% block contenido %} {% endblock contenido %}</h5>
+                    <h1 class="display-1 text-white mb-md-">La mejor solución sanitaria en su ciudad</h1>
+                    <div class="pt-2">
+                        <a href="/cuadro_medico" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">Buscar médico</a>
+                        <a href="/citas" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Cita previa</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded" src="img/about.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="mb-4">
+                        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">SOBRE NOSOTROS</h5>
+                        <h1 class="display-4">La mejor atención médica para usted y su familia</h1>
+                    </div>
+                    <p>En nuestro centro de atención médica, nos comprometemos a brindar la mejor atención posible para usted y su familia. Nuestro equipo de profesionales altamente capacitados y dedicados trabajará con usted para asegurar que reciba el cuidado médico de alta calidad que merece. Nos enorgullece ofrecer un enfoque personalizado y compasivo para cada paciente, para que se sienta cómodo y seguro mientras recibe tratamiento en nuestras instalaciones. Esperamos poder servirle y cuidar de su bienestar en el futuro.</p>
+                    <div class="row g-3 pt-3">
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-user-md text-primary mb-3"></i>
+                                <h6 class="mb-0">Médicos<small class="d-block text-primary">Cualificados</small></h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-procedures text-primary mb-3"></i>
+                                <h6 class="mb-0">Servicios<small class="d-block text-primary">De Urgencia</small></h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-microscope text-primary mb-3"></i>
+                                <h6 class="mb-0">Pruebas<small class="d-block text-primary">Precisas</small></h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-ambulance text-primary mb-3"></i>
+                                <h6 class="mb-0">Ambulancia<small class="d-block text-primary">Gratuita</small></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Pricing Plan Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Paquetes médicos</h5>
+                <h1 class="display-4">Impresionantes programas médicos</h1>
+            </div>
+            <div class="owl-carousel price-carousel position-relative" style="padding: 0 45px 45px 45px;">
+                <div class="bg-light rounded text-center">
+                    <div class="position-relative">
+                        <img class="img-fluid rounded-top" src="img/price-1.jpg" alt="">
+                        <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style="background: rgba(29, 42, 77, .8);">
+                            <h3 class="text-white">Atención al embarazo</h3>
+                            <h1 class="display-4 text-white mb-0">
+                                <small class="align-top fw-normal" style="font-size: 22px; line-height: 45px;">€</small>49<small class="align-bottom fw-normal" style="font-size: 16px; line-height: 40px;">/ Año</small>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="text-center py-5">
+                        <p>Tratamiento médico de urgencia</p>
+                        <p>Médicos con gran experiencia</p>
+                        <p>Máxima tasa de éxito</p>
+                        <p>Servicio Telefónico</p>
+                        <a href="" class="btn btn-primary rounded-pill py-3 px-5 my-2">Solicitar ahora</a>
+                    </div>
+                </div>
+                <div class="bg-light rounded text-center">
+                    <div class="position-relative">
+                        <img class="img-fluid rounded-top" src="img/price-2.jpg" alt="">
+                        <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style="background: rgba(29, 42, 77, .8);">
+                            <h3 class="text-white">Chequeo médico</h3>
+                            <h1 class="display-4 text-white mb-0">
+                                <small class="align-top fw-normal" style="font-size: 22px; line-height: 45px;">€</small>99<small class="align-bottom fw-normal" style="font-size: 16px; line-height: 40px;">/ Año</small>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="text-center py-5">
+                        <p>Tratamiento médico de urgencia</p>
+                        <p>Médicos con gran experiencia</p>
+                        <p>Máxima tasa de éxito</p>
+                        <p>Servicio Telefónico</p>
+                        <a href="" class="btn btn-primary rounded-pill py-3 px-5 my-2">Solicitar ahora</a>
+                    </div>
+                </div>
+                <div class="bg-light rounded text-center">
+                    <div class="position-relative">
+                        <img class="img-fluid rounded-top" src="img/price-3.jpg" alt="">
+                        <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style="background: rgba(29, 42, 77, .8);">
+                            <h3 class="text-white">Atención dental</h3>
+                            <h1 class="display-4 text-white mb-0">
+                                <small class="align-top fw-normal" style="font-size: 22px; line-height: 45px;">€</small>149<small class="align-bottom fw-normal" style="font-size: 16px; line-height: 40px;">/ Año</small>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="text-center py-5">
+                        <p>Tratamiento médico de urgencia</p>
+                        <p>Médicos con gran experiencia</p>
+                        <p>Máxima tasa de éxito</p>
+                        <p>Servicio Telefónico</p>
+                        <a href="" class="btn btn-primary rounded-pill py-3 px-5 my-2">Solicitar ahora</a>
+                    </div>
+                </div>
+                <div class="bg-light rounded text-center">
+                    <div class="position-relative">
+                        <img class="img-fluid rounded-top" src="img/price-4.jpg" alt="">
+                        <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style="background: rgba(29, 42, 77, .8);">
+                            <h3 class="text-white">Operación y cirugía</h3>
+                            <h1 class="display-4 text-white mb-0">
+                                <small class="align-top fw-normal" style="font-size: 22px; line-height: 45px;">€</small>199<small class="align-bottom fw-normal" style="font-size: 16px; line-height: 40px;">/ Año</small>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="text-center py-5">
+                        <p>Tratamiento médico de urgencia</p>
+                        <p>Médicos con gran experiencia</p>
+                        <p>Máxima tasa de éxito</p>
+                        <p>Servicio Telefónico</p>
+                        <a href="" class="btn btn-primary rounded-pill py-3 px-5 my-2">Solicitar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pricing Plan End -->
+
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Testimonio</h5>
+                <h2 class="display-5">Los pacientes opinan sobre nuestros servicios</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-1.jpg" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
+                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-3 fw-normal">Mi experiencia en el hospital fue muy buena. El personal médico y de enfermería fue muy amable y se tomó el tiempo para explicar cada paso del proceso de atención. Me sentí en buenas manos y bien atendido. La instalación estaba limpia y ordenada, lo que me dio confianza en la higiene y seguridad del lugar. Definitivamente recomendaría este hospital a otras personas en busca de atención médica de calidad.</p>
+                            <hr class="w-25 mx-auto">
+                            <h3>Claudia</h3>
+                            <h6 class="fw-normal text-primary mb-3">Peluquera</h6>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-2.jpg" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
+                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-4 fw-normal">Mi experiencia en este hospital fue mixta. Algunos miembros del personal eran muy amables y serviciales, mientras que otros parecían apresurados y poco interesados en atender a los pacientes. La atención médica en sí fue de buena calidad, pero el proceso de registro y espera fue un poco confuso y estresante. Me gustaría ver algunas mejoras en la comunicación y el servicio al cliente, pero en general, recibí el tratamiento necesario para mi problema médico y eso es lo que más importa.</p>
+                            <hr class="w-25 mx-auto">
+                            <h3>Fernando</h3>
+                            <h6 class="fw-normal text-primary mb-3">Informatico</h6>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-3.jpg" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
+                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-4 fw-normal">No puedo agradecer lo suficiente al personal médico y de enfermería de este hospital por su atención excepcional. Me trataron con amabilidad, respeto y compasión durante todo el proceso de mi tratamiento. Los médicos fueron muy claros y detallados en sus explicaciones, y me sentí bien informado sobre mi diagnóstico y opciones de tratamiento. Las instalaciones estaban limpias y cómodas, lo que ayudó a aliviar un poco del estrés que estaba sintiendo. Recomiendo altamente este hospital a cualquier persona que necesite atención médica.</p>
+                            <hr class="w-25 mx-auto">
+                            <h3>Laura</h3>
+                            <h6 class="fw-normal text-primary mb-3">Profesora</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->    
+
+    <!-- Footer Start -->
+{{ render(controller(  'App\\Controller\\FooterController:Footer')) }}
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

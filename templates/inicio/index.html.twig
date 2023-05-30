@@ -1,0 +1,10 @@
+{% extends 'inicio.html.twig' %}
+
+{% block contenido %}
+{% if is_granted('ROLE_USER') %}
+, {{app.user.email}}
+{% elseif is_granted('ROLE_ADMIN') %}
+, administrador {{app.user.email}}
+</div>
+{% endif %}
+{% endblock %}

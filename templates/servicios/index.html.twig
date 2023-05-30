@@ -1,0 +1,19 @@
+{% extends 'servicios.html.twig' %}
+
+{% block contenido %}
+<div class="row g-5">
+{% for servicio in servicios %}
+    <div class="col-lg-4 col-md-6">
+        <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+            <div class="service-icon mb-4">
+                <i class="fa fa-2x fa-user-md text-white"></i>
+            </div>
+            <h4 class="mb-3">{{servicio.nombre}}</h4>
+            <a class="btn btn-lg btn-primary rounded-pill" href="{{path('servicios_descripcion', {'title':servicio.nombre, 'id':servicio.id})}}">
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

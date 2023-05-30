@@ -1,0 +1,38 @@
+    <div class="container-fluid sticky-top bg-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+                <a href="/inicio" class="navbar-brand">
+                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>Hospital Jose Planes</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        {% for item in menus %}
+                                <a class="nav-item nav-link" href="{{ path(item.enlace) }}">{{item.titulo}}</a>
+                        {% endfor %}
+                        {% if is_granted('ROLE_ADMIN') %}
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Administrador</a>
+                            <div class="dropdown-menu m-0">
+                                <a class="dropdown-item" href="{{path("listar_medicos")}}">Gestión Medicos</a>
+                                <a class="dropdown-item" href="{{path("gestion_bolsa")}}">Gestión Bolsa</a>
+                                <a class="dropdown-item" href="{{path("ver_citas")}}">Ver citas</a>
+                                <a class="dropdown-item" href="{{path("bolsa_admin")}}">Ver bolsa</a>
+                                <a class="dropdown-item" href="{{path("resultados")}}">Resultados Generales Encuesta</a>
+                                <a class="dropdown-item" href="{{path("resultados_ecnuesta")}}">Resultados Encuestas</a>
+                            </div>
+                        </div>
+                        <a class="nav-item nav-link" href="{{path("app_logout")}}">Logout</a>
+                        {% elseif is_granted('ROLE_USER') %}
+                                <a class="nav-item nav-link" href="{{path("app_logout")}}">Logout</a>
+                        {% else %}
+                                <a class="nav-item nav-link" href="{{path("app_register")}}">Registro</a>
+                                <a class="nav-item nav-link" href="{{path("app_login")}}">Login</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>

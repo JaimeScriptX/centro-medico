@@ -1,0 +1,24 @@
+{% extends 'gestionmedicos.html.twig' %}
+
+{% block contenido %}
+<h1>Resultados de encuestas</h1>
+<div class="row">
+
+{% for p in prs %}
+<div class="col-md-6">
+ <br><h5>{{p.pregunta}}</h5><br>
+{% for r in resps %}
+
+{% if resulindiv[p.preguntaId][r.respuestaId] is defined %}
+            {{ r.respuesta }} = {{ porcentaje[p.preguntaId][r.respuestaId] }}% 
+            <br>
+{% endif %}
+    {% endfor %}
+    </div>
+{% endfor %}
+</div>
+
+<a href={{ path('encuestas') }}>Volver</a>
+
+{% endblock %}
+
